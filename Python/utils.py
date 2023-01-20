@@ -1,3 +1,8 @@
+import nltk
+from nltk.lm.preprocessing import padded_everygram_pipeline
+from nltk.lm import MLE
+from utils import *
+
 import openai
 
 openai.api_key = "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"
