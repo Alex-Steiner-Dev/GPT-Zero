@@ -1,4 +1,10 @@
+import nltk
+from nltk.lm.preprocessing import padded_everygram_pipeline
+from nltk.lm import MLE
+from nltk import FreqDist
+
 from utils import *
+from burtiness import *
 
 def get_perplexity(text):
     train_sentences = [get_answer(text)]
@@ -10,7 +16,7 @@ def get_perplexity(text):
     model = MLE(n)
     model.fit(train_data, padded_vocab)
 
-    test_sentences = ['Gravity is a fundamental force of nature that describes']
+    test_sentences = [text]
     tokenized_text = [list(map(str.lower, nltk.tokenize.word_tokenize(sent))) 
                     for sent in test_sentences]
 
@@ -19,12 +25,14 @@ def get_perplexity(text):
     for i, test in enumerate(test_data):
         n = float(model.perplexity(test))
 
-        print("Perplexity: {0}".format(n))
-        print(type(n))
-
         try:
             if n != float('inf'):
-                break
+                score = n * get_burtiness(text)
+
+                if score > 50:
+                    print("Your text is more likely to be generate by an AI since your score was: {0}".format(score))
+                else:
+                    print("Your text is more likely to be generate by a human since your score was: {0}".format(score))
             else:
                 get_perplexity(text)
         except:
