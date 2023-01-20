@@ -6,6 +6,8 @@ from nltk import FreqDist
 from utils import *
 from burtiness import *
 
+msg = ""
+
 def get_perplexity(text):
     train_sentences = [get_answer(text)]
 
@@ -28,11 +30,15 @@ def get_perplexity(text):
         try:
             if n != float('inf'):
                 score = n * get_burtiness(text)
+                global msg
                 if score < 75:
-                    print("Your text is more likely to be generate by an AI since your score was: {0}".format(score))
+                    msg = ("Your text is more likely to be generate by an AI since your score was: {0}".format(score))
                 else:
-                    print("Your text is more likely to be generate by a human since your score was: {0}".format(score))
+                    msg = ("Your text is more likely to be generate by a human since your score was: {0}".format(score))
             else:
                 get_perplexity(text)
         except:
             get_perplexity(text)
+
+def return_msg():
+    return msg
