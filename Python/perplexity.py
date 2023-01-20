@@ -28,8 +28,8 @@ def get_perplexity(text):
         try:
             if n != float('inf'):
                 score = n * get_burtiness(text)
-
-                if score > 50:
+                
+                if score < 75:
                     print("Your text is more likely to be generate by an AI since your score was: {0}".format(score))
                 else:
                     print("Your text is more likely to be generate by a human since your score was: {0}".format(score))
