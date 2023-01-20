@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="stylesheet" href="/static/css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>GPT Zero</title>
 </head>
 <body>
@@ -19,12 +21,12 @@
 
         <textarea rows="20" cols="50" type="submit" name="text-area"></textarea>
         <br>
-        <input type="submit" value="Submit">
+        <button id="button" onclick="Load()">Enter<i id='loader' class="fa fa-circle-o-notch fa-spin" style="display: none;"></i></button>
     </form>
 </body>
 
 <script>
-    function Evaluate(){
+    function Load(){
         document.getElementById('loader').style.display = "block";
     }
 </script>
