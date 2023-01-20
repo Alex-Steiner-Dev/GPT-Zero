@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>GPT Zero</title>
+</head>
+<body>
+    <form method="post" action="/evaluate">
+        <h1>Welcome to GPT Zero!</h1>
+
+        <h4>Keep in mind that is a just a recreation!</h4>
+        <h4>If you want to visit the real website <a href="https://gptzero.me">this</a> is the link.</h4>
+
+        <textarea rows="20" cols="50" type="submit" name="text-area"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+<script>
+    function Evaluate(){
+        document.getElementById('loader').style.display = "block";
+    }
+</script>
+
+</html>
