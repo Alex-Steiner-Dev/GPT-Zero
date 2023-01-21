@@ -48,5 +48,4 @@
 <ul>
   <li>Inspiration from <a href="https://gptzero.me">gptzero.me</a></li>
 </ul>
-<p>Please make sure to replace <strong>Your Name</strong> and <strong>Your GitHub</strong> with your own name and profile link.</p>
 <p>Additionally, please note that to run this model you need to have credentials to access OpenAI's GPT2 model. You can find more information on how to acquire credentials on the <a href="https://openai.com/">OpenAI website</a>.</p>
