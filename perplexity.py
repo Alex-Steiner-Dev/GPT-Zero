@@ -31,7 +31,7 @@ def get_perplexity(text):
             if n != float('inf'):
                 score = n / get_burstiness(text)
                 global msg
-                if score < 75:
+                if score < 51:
                     msg = ("Your text is more likely to be generate by an AI since your score was: {0}".format(100 - (score / 2)))
                 else:
                     msg = ("Your text is more likely to be generate by a human since your score was: {0}".format((score / 2)))
