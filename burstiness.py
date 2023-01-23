@@ -3,7 +3,7 @@ from nltk.lm.preprocessing import padded_everygram_pipeline
 from nltk.lm import MLE
 from nltk import FreqDist
 
-def get_burtiness(text):
+def get_burstiness(text):
     tokens = nltk.word_tokenize(text)
 
     fdist = FreqDist(tokens)
