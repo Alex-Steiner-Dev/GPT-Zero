@@ -4,17 +4,16 @@ def evaluate(text):
     print("Evaluating the text given...")
 <<<<<<< HEAD
 
-    paragraphs = grouper(sent_tokenize(text), 9)
+    paragraphs = grouper(sent_tokenize(text), 5)
     results = []
 
     print(len(paragraphs))
 
     for i in range(len(paragraphs)):
         txt = ""
-        for j in paragraphs[i]:
-            txt+= str(j)
+        for j in range(len(paragraphs[i])):
+            txt += paragraphs[i][j]
 
-        print(j)
         get_perplexity(txt)
         results.append(return_msg())
 
