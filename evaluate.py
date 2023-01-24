@@ -8,16 +8,17 @@ from typing import List
 def evaluate(text):
     print("Evaluating the text given...")
 
-    paragraphs = grouper(sent_tokenize(text), 5)
+    paragraphs = grouper(sent_tokenize(text), 9)
     results = []
 
     print(len(paragraphs))
 
     for i in range(len(paragraphs)):
         txt = ""
-        for j in range(len(paragraphs[i])):
-            txt += paragraphs[i][j]
+        for j in paragraphs[i]:
+            txt+= str(j)
 
+        print(j)
         get_perplexity(txt)
         results.append(return_msg())
 
