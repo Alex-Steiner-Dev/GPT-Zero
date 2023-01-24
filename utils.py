@@ -1,18 +1,7 @@
 import openai
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-openai.api_key = "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"
-model_engine = "text-davinci-003"
-=======
-openai.api_key = "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"
-model_engine = "text-davinci-002"
->>>>>>> parent of 53eee72 (Updates)
-=======
 openai.api_key = "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"
-model_engine = "text-davinci-002"
->>>>>>> parent of c1dc014 (Splitting into secetions)
-
+model_engine = "text-davinci-003"
 
 # Get the text input from the js server
 def get_answer(prompt): 
