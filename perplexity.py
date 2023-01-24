@@ -7,6 +7,7 @@ from utils import *
 from burstiness import *
 
 msg = ""
+count = 0
 
 def get_perplexity(text):
     train_sentences = [get_answer(text)]
@@ -26,18 +27,26 @@ def get_perplexity(text):
 
     for i, test in enumerate(test_data):
         n = float(model.perplexity(test))
-
         try:
+            print(n)
             if n != float('inf'):
-                score = n / get_burstiness(text)
                 global msg
+
+                try:
+                    score = n / get_burstiness(text)
+                except:
+                    # do nothing
+                    pass
+
                 if score < 51:
                     msg = ("Your text is more likely to be generate by an AI since your score was: {0}".format(100 - (score / 2)))
                 else:
                     msg = ("Your text is more likely to be generate by a human since your score was: {0}".format((score / 2)))
             else:
                 get_perplexity(text)
-        except:
+                
+        except Exception as e:
+            print(e)
             get_perplexity(text)
 
 def return_msg():
