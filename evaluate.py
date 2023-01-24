@@ -1,12 +1,8 @@
-from perplexity import *
-from nltk.tokenize import sent_tokenize 
-
-from itertools import zip_longest
-from typing import List
-
+from perplexity import * 
 
 def evaluate(text):
     print("Evaluating the text given...")
+<<<<<<< HEAD
 
     paragraphs = grouper(sent_tokenize(text), 9)
     results = []
@@ -23,9 +19,8 @@ def evaluate(text):
         results.append(return_msg())
 
         print(results[i])
+=======
+    get_perplexity(text)
+>>>>>>> parent of 53eee72 (Updates)
     
-    return results[0]
-
-def grouper(iterable: List, n: int, fillvalue=None) -> List:
-    args = [iter(iterable)] * n
-    return list(zip_longest(*args, fillvalue=fillvalue))
+    return return_msg()

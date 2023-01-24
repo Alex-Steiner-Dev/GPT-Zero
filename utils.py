@@ -1,7 +1,12 @@
 import openai
 
+<<<<<<< HEAD
 openai.api_key = "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"
 model_engine = "text-davinci-003"
+=======
+openai.api_key = "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"
+model_engine = "text-davinci-002"
+>>>>>>> parent of 53eee72 (Updates)
 
 
 # Get the text input from the js server
