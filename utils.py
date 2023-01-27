@@ -1,6 +1,7 @@
 import openai
+import requests
 
-openai.api_key = "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"
+openai.api_key = "YOUR_OPEN_AI_KEY"
 model_engine = "text-davinci-003"
 
 # Get the text input from the js server
@@ -10,5 +11,5 @@ def get_answer(prompt):
     completions = openai.Completion.create(engine=model_engine, prompt=prompt, max_tokens=2000, n=1,stop=None,temperature=0.5)
 
     response = completions.choices[0].text
-    
+
     return response
