@@ -9,7 +9,7 @@
 <h3>Prerequisites</h3>
 
 <ul>
-  <li>Python 3.6 or higher</li>
+  <li>Python 3.9 or higher</li>
   <li>The OpenAI library</li>
   <li>NLPT (Natural Language Toolkit)</li>
   <li>Flask (Web framework)</li>
