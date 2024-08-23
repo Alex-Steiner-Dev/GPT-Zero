@@ -1,6 +1,6 @@
 <h1>GPT-Zero</h1>
 
-<p>A recreation of the website <a href="https://gptzero.me">gptzero.me</a> which utilizes the OpenAI GPT-2 model to determine whether a piece of text was written by a human or a machine. This program allows you to input a piece of text and it will output a score indicating the likelihood that the text was written by a human.</p>
+<p>A recreation of the website <a href="https://gptzero.me">gptzero.me</a> which utilizes the OpenAI GPT-4 model to determine whether a piece of text was written by a human or a machine. This program allows you to input a piece of text and it will output a score indicating the likelihood that the text was written by a human.</p>
 
 <h2>Getting Started</h2>
 
@@ -19,7 +19,7 @@
 
 <p>To install the necessary libraries, run the following command in your terminal:</p>
 <code>pip install openai nltk flask</code>
-<p>This command will install the OpenAI library, NLTK, and Flask. The OpenAI library is used to access the GPT-2 model and perform the text generation and scoring. NLTK is used for natural language processing tasks such as tokenization and stemming. Flask is used to create the web interface for the program.</p>
+<p>This command will install the OpenAI library, NLTK, and Flask. The OpenAI library is used to access the GPT-4 model and perform the text generation and scoring. NLTK is used for natural language processing tasks such as tokenization and stemming. Flask is used to create the web interface for the program.</p>
 
 <h3>Running the program</h3>
 
@@ -27,7 +27,7 @@
 <code>./run.sh</code>
 <p>This will start the local server and the program can be accessed in your web browser at <a href="http://localhost:8080/">http://localhost:8080/</a></p>
 
-<p>You can input a text in the text area and click on "Submit" button. The program will use the GPT-2 model to generate a similar text and compare the input text with the generated text, based on this it will output a score indicating the likelihood that the text was written by a human.</p>
+<p>You can input a text in the text area and click on "Submit" button. The program will use the GPT-4 model to generate a similar text and compare the input text with the generated text, based on this it will output a score indicating the likelihood that the text was written by a human.</p>
 
 <h2>Built With</h2>
 
